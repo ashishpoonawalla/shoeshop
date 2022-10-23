@@ -1,12 +1,11 @@
-import HomeScreen from "./src/Screens/HomeScreen"
-import { Box, NativeBaseProvider, Text } from "native-base";
-import LoginScreen from "./src/Screens/LoginScreen";
+import { NativeBaseProvider } from "native-base";
+import NotVerifyScreen from "./src/Screens/NotVerifyScreen"
 
 const App = () =>
 {
   return (
     <NativeBaseProvider>
-      <LoginScreen/>
+      <NotVerifyScreen />
     </NativeBaseProvider>
   )
 }

@@ -1,11 +1,87 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import
+{
+  Box,
+  View,
+  Text,
+  Image,
+  Heading,
+  VStack,
+  Input,
+  Button,
+  Pressable,
+} from "native-base"
+import React from "react"
+import Colors from "../color"
+import { Ionicons, AntDesign } from "@expo/vector-icons"
 
-const LoginScreen = () => {
+const LoginScreen = () =>
+{
   return (
-    <View>
-      <Text>LoginScreen</Text>
-    </View>
+    <Box flex={1} bg={Colors.main}>
+      <Image
+        flex={1}
+        alt="Logo"
+        resizeMode="cover"
+        size="lg"
+        w="full"
+        source={require("../../assets/screen3.png")}
+      />
+      <Box
+        w="full"
+        h="full"
+        position="absolute"
+        top="20"
+        px="6"
+        justifyContent="center">
+        <Heading>LOGIN</Heading>
+        <VStack space={4} pt="6">
+          <Input
+            InputLeftElement={
+              <Ionicons
+                name="mail"
+                size={20}
+                color={Colors.main}
+              />
+            }
+            variant="underlined"
+            placeholder="user@gmail.com"
+            w="70%"
+            color={Colors.black}
+            borderBottomColor={Colors.underline}
+          />
+
+          <Input
+            InputLeftElement={
+              <AntDesign
+                name="eye"
+                size={24}
+                color={Colors.main}
+              />
+            }
+            variant="underlined"
+            placeholder="********"
+            type="password"
+            w="70%"
+            color={Colors.black}
+            borderBottomColor={Colors.underline}
+          />
+        </VStack>
+
+        <Button
+          _pressed={{
+            bg: Colors.main,
+          }}
+          my={30}
+          w="40%"
+          rounded={50}
+          bg={Colors.main}>
+          LOGIN
+        </Button>
+        <Pressable mt={4}>
+          <Text color={Colors.lightBlack}>SIGN UP</Text>
+        </Pressable>
+      </Box>
+    </Box>
   )
 }
 
