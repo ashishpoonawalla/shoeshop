@@ -1,11 +1,11 @@
 import { NativeBaseProvider } from "native-base";
-import NotVerifyScreen from "./src/Screens/NotVerifyScreen"
+import HomeScreen from "./src/Screens/HomeScreen";
 
 const App = () =>
 {
   return (
     <NativeBaseProvider>
-      <NotVerifyScreen />
+      <HomeScreen/>
     </NativeBaseProvider>
   )
 }
