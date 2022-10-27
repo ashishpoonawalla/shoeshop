@@ -4,6 +4,7 @@ import NumericInput from 'react-native-numeric-input'
 import Colors from "../color"
 import Rating from '../Components/Rating'
 import Buttone from "../Components/Buttone"
+import Review from '../Components/Review'
 
 const SingleProductScreen = () =>
 {
@@ -48,6 +49,10 @@ const SingleProductScreen = () =>
         <Buttone bg={Colors.main} color={Colors.white} mt={5}>
           ADD TO CART
         </Buttone>
+
+        {/* Review */}
+        <Review/>
+
       </ScrollView>
     </Box>
   )
