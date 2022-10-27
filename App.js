@@ -1,11 +1,12 @@
 import { NativeBaseProvider } from "native-base";
-import LoginScreen from "./src/Screens/LoginScreen";
+import HomeScreen from "./src/Screens/HomeScreen";
+import SingleProductScreen from "./src/Screens/SingleProductScreen";
 
 const App = () =>
 {
   return (
     <NativeBaseProvider>
-      <LoginScreen/>
+      <SingleProductScreen />
     </NativeBaseProvider>
   )
 }

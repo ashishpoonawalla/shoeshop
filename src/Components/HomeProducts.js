@@ -2,11 +2,12 @@ import { ScrollView, Text, Flex, Pressable, Image, Box, Heading } from "native-b
 import React from "react"
 import products from "../data/Products"
 import Colors from "../color"
+import Rating from "./Rating"
 
 const HomeProducts = () =>
 {
     return (
-        <ScrollView flex={1}>
+        <ScrollView flex={1} showsVerticalScrollIndicator={false}>
             <Flex
                 flexWrap="wrap"
                 direction="row"
@@ -26,7 +27,7 @@ const HomeProducts = () =>
 
                     >
                         <Image
-                            source={require( product.image)}
+                            source={require("../../assets/images/" + product.image)}
                             alt={product.name}
                             w="full"
                             h={24}
@@ -36,7 +37,11 @@ const HomeProducts = () =>
                             <Heading size="sm" bold>
                                 ${product.price}
                             </Heading>
-                            <Text fontSize={10} mt={1} isTruncated> {product.name}</Text>
+                            <Text fontSize={10} mt={1} isTruncated>
+                                {product.name}
+                            </Text>
+                            {/* rating */}
+                            <Rating value={product.rating} />
                         </Box>
                     </Pressable>
                 ))}
