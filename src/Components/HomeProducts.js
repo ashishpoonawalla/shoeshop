@@ -26,7 +26,7 @@ const HomeProducts = () =>
 
                     >
                         <Image
-                            source={require("../../assets/images/" + product.image)}
+                            source={require( product.image)}
                             alt={product.name}
                             w="full"
                             h={24}
