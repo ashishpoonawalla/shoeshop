@@ -6,7 +6,13 @@ const SingleProductScreen = () => {
   return (
     <Box safeArea flex={1} bg={Colors.white}>
       <ScrollView px={5} showsVerticalScrollIndicator={false}>
-        <Image source={require("../../assets/images/1.jpg")}/>
+        <Image source={require("../../assets/images/1.jpg")}
+          alt="Image"
+          w="full"
+          h={300}
+          resizeMode="contain"
+
+        />
       </ScrollView>
     </Box>
   )
